@@ -38,32 +38,50 @@ public class LL {
 		int n = sc.nextInt();
 		Node prev = null;
 		Node head = null;
-		for(int i = 0 ; i<n ; i++)
+			for(int i = 0 ; i<n ; i++) // for creating a dynamic LL
+			{
+				int value = sc.nextInt();
+				Node item = new Node(value);
+				if(prev != null)
+				{
+					prev.next = item;
+					prev = item;
+				}
+				else
+				{
+					head = item;
+					prev = head;
+				}
+			}
+			
+		int val =  sc.nextInt();
+		int pos = sc.nextInt();
+		
+		Node newNode = new Node(val);
+		if(pos== 0)
 		{
-			int value = sc.nextInt();
-			Node item = new Node(value);
-			if(prev != null)
-			{
-				prev.next = item;
-				prev = item;
-			}
-			else
-			{
-				head = item;
-				prev = head;
-			}
+			newNode.next = head;
+			head = newNode;
 		}
-		
-		
-		// iterating a linked list 
+		int count = 0;
 		Node current = head;
+		while(count < pos - 1 )
+		{
+			current = current.next;
+			System.out.println(current.value);
+			count++;
+		}
+		// current => 2
+		newNode.next = current.next;
+		current.next = newNode;
+			
+		// iterating a linked list
+		current = head;
 		while(current != null)
 		{
 			System.out.print(current.value + " => ");
 			current = current.next;
 		}
-		
-		
 		
 	}
 
