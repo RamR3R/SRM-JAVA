@@ -1,5 +1,6 @@
 package day8;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 class Node
@@ -33,6 +34,9 @@ public class LL {
 		
 		
 		Scanner sc = new Scanner(System.in);
+		LinkedList<Integer> lk = new LinkedList<>();
+		String s = "Ram";
+		s.toLowerCase();
 		
 		System.out.print("Enter the no.of Nodes : ");
 		int n = sc.nextInt();
