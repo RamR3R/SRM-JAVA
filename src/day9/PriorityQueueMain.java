@@ -23,7 +23,9 @@ public class PriorityQueueMain {
 
 	public static void main(String[] args) {
 		
-		PriorityQueue<pairs> pq = new PriorityQueue<>((a,b) -> b.priority-a.priority);
+		PriorityQueue<pairs> pq = new PriorityQueue<>(
+				(a,b) -> b.priority-a.priority
+				);
 		pq.add(new pairs("Ram" , 100));
 		pq.add(new pairs("Modi" , 0));
 		pq.add(new pairs("VK" , 1));
@@ -32,7 +34,7 @@ public class PriorityQueueMain {
 		System.out.println(pq);
 		System.out.println(pq.remove());
 		System.out.println(pq);
-
+		
 	}
 
 }
