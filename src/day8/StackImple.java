@@ -1,5 +1,7 @@
 package day8;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class StackImple {
@@ -15,7 +17,6 @@ public class StackImple {
 		System.out.println(st.peek());
 		st.push(45);
 		System.out.println(st.peek());
-		
 		System.out.println(st.size());
 
 		
